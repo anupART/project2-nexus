@@ -1,0 +1,45 @@
+<!-- signup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Restaurant Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Sign Up</h2>
+  <form id="signupform" name="myform" action="signup.php" method="post" onsubmit="return validateSignupForm()">
+    <label for="signupusername">Username</label>
+    <input type="text" id="signupusername" name="signupusername" required>
+
+    <label for="signuppass">Password (at least 8 characters, including letters and numbers)</label>
+    <input type="password" id="signuppass" name="signuppass" required>
+
+    <label for="confirmpass">Confirm Password</label>
+    <input type="password" id="confirmpass" name="confirmpass" required>
+
+    <!-- Added fields for city, phone number, and age -->
+    <label for="signupcity">City</label>
+    <input type="text" id="signupcity" name="signupcity" required>
+
+    <label for="signupphone">Phone Number</label>
+    <input type="text" id="signupphone" name="signupphone" pattern="[0-9]{10}" required>
+    <small>Format: 1234567890</small>
+
+    <label for="signupage">Age</label>
+    <input type="number" id="signupage" name="signupage" min="18" required>
+
+    <button type="submit">Sign Up</button>
+    <p class="error" id="signupissue"></p>
+  </form>
+
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
